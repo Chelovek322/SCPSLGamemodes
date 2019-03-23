@@ -23,7 +23,7 @@ namespace ZombielandGamemode
                 {
                     Server server = plugin.pluginManager.Server;
                     server.Map.ClearBroadcasts();
-                    server.Map.Broadcast(25, "<color=#50c878>Zombieland Gamemode</color> is starting...", false);
+                    server.Map.Broadcast(25, "Игровой режим <color=#50c878>Зомбилэнд</color> начинается...", false);
                 }
                 else
                     (ev.Player.GetGameObject() as GameObject).GetComponent<WeaponManager>().NetworkfriendlyFire = true;
@@ -39,11 +39,11 @@ namespace ZombielandGamemode
                 }
                 else if (ev.TeamRole.Team != Smod2.API.Team.SPECTATOR)
                 {
-                    ev.Player.PersonalBroadcast(25, "You are a human! You must escape the zombie outbreak! Any human deaths from any cause will result in more zombies! When killed, zombies respawn as Chaos! Good Luck!", false);
+                    ev.Player.PersonalBroadcast(25, "Ты человек! Ты должен сбежать из этого комплекса! Любой умерший человек станет зомби! Если зомби умирает, он становится Хаоситом! Удачи!", false);
                 }
                 else if (ev.TeamRole.Team == Smod2.API.Team.SPECTATOR)
                 {
-                    ev.Player.PersonalBroadcast(25, "You are dead! But don't worry, you'll respawn as Chaos soon to fight the zombies!", false);
+                    ev.Player.PersonalBroadcast(25, "Ты мёртв! Но не переживай, ты скоро заспавнишься за хаосита, чтобы убить всех зомби!", false);
                 }
             }
         }

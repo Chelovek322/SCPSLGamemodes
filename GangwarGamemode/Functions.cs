@@ -21,7 +21,7 @@ namespace Gangwar
             if (!Gangwar.roundstarted)
             {
                 Gangwar.Server.Map.ClearBroadcasts();
-                Gangwar.Server.Map.Broadcast(25, "<color=#00ffff> Gangwar Gamemode is starting..</color>", false);
+                Gangwar.Server.Map.Broadcast(25, "Игровой режим<color=#00ffff> Война Группировок начинается..</color>", false);
             }
         }
 

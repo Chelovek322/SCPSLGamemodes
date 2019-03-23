@@ -21,7 +21,7 @@ namespace ZombielandGamemode
             if (!Zombieland.roundstarted)
             {
                 Zombieland.pluginManager.Server.Map.ClearBroadcasts();
-                Zombieland.pluginManager.Server.Map.Broadcast(25, "<color=#50c878>Zombieland Gamemode</color> is starting..", false);
+                Zombieland.pluginManager.Server.Map.Broadcast(25, "Игровой режим <color=#50c878>Зомбилэнд</color> начинается..", false);
             }
         }
         public void DisableGamemode()
@@ -46,7 +46,7 @@ namespace ZombielandGamemode
             player.Teleport(spawn);
 
             player.PersonalClearBroadcasts();
-            player.PersonalBroadcast(15, killer.Name + " killed you, and you became a <color=#c50000>Zombie</color>! Attacking or killing humans creates more zombies! Death to the living!", false);
+            player.PersonalBroadcast(15, killer.Name + " убил тебя, и ты стал <color=#c50000>Зомби</color>! Атака или убийство людей сделает ещё больше Зомби! Смерть всему живому!", false);
         }
         public IEnumerable<float> AliveCounter(float delay)
         {
@@ -54,7 +54,7 @@ namespace ZombielandGamemode
             {
                 Zombieland.Server.Map.ClearBroadcasts();
                 int human_count = (Zombieland.Round.Stats.NTFAlive + Zombieland.Round.Stats.ScientistsAlive + Zombieland.Round.Stats.ClassDAlive + Zombieland.Round.Stats.CiAlive);
-                Zombieland.Server.Map.Broadcast(10, "There are currently " + Zombieland.Round.Stats.Zombies + " zombies and " + human_count + " humans alive.", false);
+                Zombieland.Server.Map.Broadcast(10, "В живых " + Zombieland.Round.Stats.Zombies + " зомби и " + human_count + " Класс-Д.", false);
                 yield return delay;
             }
         }
@@ -67,7 +67,7 @@ namespace ZombielandGamemode
             Zombieland.Alpha.Add(player);
             player.SetHealth(Zombieland.zombie_health);
             player.PersonalClearBroadcasts();
-            player.PersonalBroadcast(15, "You are an alpha <color=#c50000>Zombie</color>! Attacking or killing humans creates more zombies! Death to the living!", false);
+            player.PersonalBroadcast(15, "Ты Альфа <color=#c50000>Зомби</color>! Атака или убийство людей сделает ещё больше Зомби! Смерть всему живому!", false);
         }
         public IEnumerable<float> OpenGates(float delay)
         {

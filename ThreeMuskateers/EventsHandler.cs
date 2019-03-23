@@ -23,7 +23,7 @@ namespace MuskateersGamemode
                 {
                     Server server = plugin.pluginManager.Server;
                     server.Map.ClearBroadcasts();
-                    server.Map.Broadcast(25, "<color=#308ADA>Three Muskateers</color> gamemode is starting..", false);
+                    server.Map.Broadcast(25, "Игровой режим <color=#308ADA>Три Мушкетёра</color> начинается..", false);
                 }
             }
         }
@@ -122,11 +122,11 @@ namespace MuskateersGamemode
                 plugin.Server.Map.ClearBroadcasts();
                 if (ev.Player.TeamRole.Team == Team.NINETAILFOX)
                 {
-                    plugin.Server.Map.Broadcast(15, "There are now " + (plugin.Server.Round.Stats.NTFAlive - 1) + "<color=#308ADA> Muskateers alive!</color>", false);
+                    plugin.Server.Map.Broadcast(15, "<color=#308ADA>Живых Мушкетёров:</color> " + (plugin.Server.Round.Stats.NTFAlive - 1) + ".", false);
                 }
                 else if (ev.Player.TeamRole.Team != Team.NINETAILFOX)
                 {
-                    plugin.Server.Map.Broadcast(15, "There are now " + ((plugin.Server.Round.Stats.ClassDAlive + plugin.Server.Round.Stats.CiAlive) - 1) + "<color=#DAA130> Class-D alive!</color>", false);
+                    plugin.Server.Map.Broadcast(15, "В живых " + ((plugin.Server.Round.Stats.ClassDAlive + plugin.Server.Round.Stats.CiAlive) - 1) + "<color=#DAA130> Класс-Д!</color>", false);
                 }
             }
         }

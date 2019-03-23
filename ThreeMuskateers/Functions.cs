@@ -19,7 +19,7 @@ namespace MuskateersGamemode
             if (!Muskateers.roundstarted)
             {
                 Muskateers.pluginManager.Server.Map.ClearBroadcasts();
-                Muskateers.pluginManager.Server.Map.Broadcast(25, "<color=#308ADA> Three Muskateers</color> gamemode starting..", false);
+                Muskateers.pluginManager.Server.Map.Broadcast(25, "Игровой режим<color=#308ADA> Три Мушкетёра</color> начинается.", false);
             }
         }
         public void DisableGamemode()
@@ -33,7 +33,7 @@ namespace MuskateersGamemode
             yield return 2;
             player.SetHealth(Muskateers.ntf_health);
             player.PersonalClearBroadcasts();
-            player.PersonalBroadcast(25, "You are a <color=#308ADA>Muskateer</color>. Enter the facility and eliminate all Class-D.", false);
+            player.PersonalBroadcast(25, "Ты <color=#308ADA>Мушкетёр</color>. Войди в комплекс и ликвидируй весь Д-Класс.", false);
         }
         public IEnumerable<float> SpawnClassD(Player player)
         {
@@ -43,7 +43,7 @@ namespace MuskateersGamemode
             player.GiveItem(ItemType.USP);
             player.GiveItem(ItemType.ZONE_MANAGER_KEYCARD);
             player.PersonalClearBroadcasts();
-            player.PersonalBroadcast(25, "You are a <color=#DAA130>Class-D personnel</color>. Escape the facility before the auto-nuke, but evade the NTF sent to kill you!", false);
+            player.PersonalBroadcast(25, "Ты <color=#DAA130>Д-Класс</color>. Сбеги из комплекса до взрыва автоматической боеголовки, но избегай МТФ, отправленных чтобы убить тебя!", false);
         }
         public void EndGamemodeRound()
         {

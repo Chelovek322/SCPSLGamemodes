@@ -30,7 +30,7 @@ namespace PresidentialEscortGamemode
                 {
                     Server server = plugin.pluginManager.Server;
                     server.Map.ClearBroadcasts();
-                    server.Map.Broadcast(25, "<color=#f8ea56>Presidential Escort</color> gamemode is starting...", false);
+                    server.Map.Broadcast(25, "Игровой режим <color=#f8ea56>Президентский Эскорт</color> начинается...", false);
                 }
             }
         }

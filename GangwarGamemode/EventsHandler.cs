@@ -22,7 +22,7 @@ namespace Gangwar
                 {
                     Server server = plugin.pluginManager.Server;
                     server.Map.ClearBroadcasts();
-                    server.Map.Broadcast(25, "<color=00FFFF> Gangwar Gamemode</color> is starting..", false);
+                    server.Map.Broadcast(25, "Игровой режим<color=00FFFF> Война Группировок</color> начинается..", false);
                 }
             }
         }
@@ -40,7 +40,7 @@ namespace Gangwar
                 }
                 else if (ev.Player.TeamRole.Team == Team.SPECTATOR)
                 {
-                    ev.Player.PersonalBroadcast(25, "You are dead, but don't worry, you will respawn soon!", false);
+                    ev.Player.PersonalBroadcast(25, "Ты мёртв, но не переживай, ты скоро заспавнишься!", false);
                 }
             }
         }
@@ -108,7 +108,7 @@ namespace Gangwar
                     {
                         ev.Status = ROUND_END_STATUS.ON_GOING;
                         ev.Server.Map.ClearBroadcasts();
-                        ev.Server.Map.Broadcast(10, "There are " + plugin.Round.Stats.CiAlive + " Chaos alive, and " + plugin.Round.Stats.NTFAlive + " NTF alive.", false);
+                        ev.Server.Map.Broadcast(10, "Повстанцев хаоса: " + plugin.Round.Stats.CiAlive + ". МОГ: " + plugin.Round.Stats.NTFAlive + ".", false);
                     }
                     else if (ciAlive && ntfAlive == false)
                     {

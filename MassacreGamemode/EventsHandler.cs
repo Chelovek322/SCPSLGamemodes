@@ -91,7 +91,7 @@ namespace MassacreGamemode
                 {
                     plugin.Server.Map.ClearBroadcasts();
                     plugin.Server.Map.Broadcast(5, "В живых " + (plugin.Server.Round.Stats.ClassDAlive - 1) + " Класс-Д.", false);
-                    ev.Player.PersonalBroadcast(25, "Вы мертвы! Но не расстраивайтесь, теперь вы можете расслабиться и смотреть, как ваши друзья умирают!", false);
+                    ev.Player.PersonalBroadcast(25, "Ты мёртв! Но не расстраивайся, теперь ты можешь расслабиться и смотреть, как твои друзья умирают!", false);
                 }
             }
         }

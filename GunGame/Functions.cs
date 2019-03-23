@@ -22,7 +22,7 @@ namespace Gungame
             if (!GunGame.roundstarted)
             {
                 GunGame.Server.Map.ClearBroadcasts();
-                GunGame.Server.Map.Broadcast(10, "<color=#5D9AAC>GunGame Gamemode</color> is starting..", false);
+                GunGame.Server.Map.Broadcast(10, "Игровой режим <color=#5D9AAC>Гонка Вооружений</color> начинается..", false);
             }
         }
         public void DisableGamemode()
@@ -141,7 +141,7 @@ namespace Gungame
         public void AnnounceWinner(Player player)
         {
             GunGame.Server.Map.ClearBroadcasts();
-            GunGame.Server.Map.Broadcast(15, "We have out champion! Congratulations " + player.Name + "!", false);
+            GunGame.Server.Map.Broadcast(15, "У нас есть победитель! Поздравляем " + player.Name + "!", false);
             EndGamemodeRound();
         }
         public Room GetRooms(ZoneType zone)

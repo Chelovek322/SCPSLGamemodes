@@ -21,7 +21,7 @@ namespace PresidentialEscortGamemode
             if (!PresidentialEscort.roundstarted)
             {
                 PresidentialEscort.pluginManager.Server.Map.ClearBroadcasts();
-                PresidentialEscort.pluginManager.Server.Map.Broadcast(25, "<color=#f8ea56>Presidential Escort</color> gamemode is starting...", false);
+                PresidentialEscort.pluginManager.Server.Map.Broadcast(25, "Игровой режим <color=#f8ea56>Президентский Эскорт</color> начинается...", false);
             }
         }
         public void DisableGamemode()
@@ -56,8 +56,8 @@ namespace PresidentialEscortGamemode
             player.GiveItem(ItemType.FLASHLIGHT);
 
             player.PersonalClearBroadcasts();
-            player.PersonalBroadcast(15, "You are the <color=#f8ea56>VIP</color> Escape the facility with the help of " +
-                "<color=#308ADA>NTF</color> while avoiding the <color=#e83e25>SCPs</color>.", false);
+            player.PersonalBroadcast(15, "Ты <color=#f8ea56>VIP</color>. Сбеги из комплекса кооперируясь с " +
+                "<color=#308ADA>МТФ</color>, избегая <color=#e83e25>SCP</color>.", false);
 
         }
 
@@ -84,8 +84,8 @@ namespace PresidentialEscortGamemode
             player.GiveItem(ItemType.FLASHLIGHT);
 
             player.PersonalClearBroadcasts();
-            player.PersonalBroadcast(15, "You are an <color=#308ADA>NTF Cadet</color>. Work with others to help the " +
-                "<color=#f8ea56>VIP</color> escape and eliminate the <color=#e83e25>SCPs</color>", false);
+            player.PersonalBroadcast(15, "Ты <color=#308ADA>МТФ Кадет</color>. Сотрудничай с остальными, чтобы помочь " +
+                "<color=#f8ea56>VIP</color> сбежать и ликвидировать <color=#e83e25>SCP</color>", false);
         }
     }
 }

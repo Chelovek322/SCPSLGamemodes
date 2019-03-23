@@ -105,7 +105,7 @@ namespace MassacreGamemode
             player.Teleport(Massacre.SpawnLoc);
             Massacre.Info("Spawned " + player.Name + " as SCP-173");
             player.PersonalClearBroadcasts();
-            player.PersonalBroadcast(35, "Ты <color=#c50000>печенька</color>! Убей всех Дешек!", false);
+            player.PersonalBroadcast(35, "Ты <color=#c50000>Печенька</color>! Убей всех Дешек!", false);
             player.SetHealth(Massacre.nut_health);
         }
         public void EndGamemodeRound()
