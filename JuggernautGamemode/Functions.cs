@@ -21,7 +21,7 @@ namespace JuggernautGamemode
             if (!Juggernaut.roundstarted)
             {
                 Juggernaut.pluginManager.Server.Map.ClearBroadcasts();
-                Juggernaut.pluginManager.Server.Map.Broadcast(25, "<color=#228B22>Juggernaut Gamemode</color> is starting...", false);
+                Juggernaut.pluginManager.Server.Map.Broadcast(25, "Игровой режим <color=#228B22>Джагернаут</color> начинается...", false);
             }
         }
         public void DisableGamemode()
@@ -82,7 +82,7 @@ namespace JuggernautGamemode
             int damage = (int)(Juggernaut.juggernaut_health * Juggernaut.critical_damage);
             player.Damage(damage, DamageType.FRAG);
             player.Teleport(position);
-            Juggernaut.pluginManager.Server.Map.Broadcast(10, "The <color=#228B22>Juggernaut</color> take a <b>critical hit <i><color=#ff0000> -" + damage + "</color></i></b> and has been <b>transported</b> across the facility!", false);
+            Juggernaut.pluginManager.Server.Map.Broadcast(10, "<color=#228B22>Джагернауту</color> был нанесён <b>критический урон <i><color=#ff0000>в размере -" + damage + "</color></i></b> HP, и Джагернаут был <b>перенесён</b> в случайную часть комплекса!", false);
             Juggernaut.Debug("Juggernaut Disarmed & Teleported");
         }
 
@@ -93,7 +93,7 @@ namespace JuggernautGamemode
             int damage = (int)(Juggernaut.juggernaut_health * Juggernaut.critical_damage);
             player.Damage(damage, DamageType.FRAG);
             player.Teleport(position);
-            Juggernaut.pluginManager.Server.Map.Broadcast(10, "" + activator.Name + " has sacrifieced themselves and made the <color=#228B22>Juggernaut</color> take a <b>critical hit <i><color=#ff0000> -" + damage + "</color></i></b> and has been <b>transported</b> across the facility!", false);
+            Juggernaut.pluginManager.Server.Map.Broadcast(10, "" + activator.Name + " пожертвовал собой и тем самым нанёс <color=#228B22>Джагернауту</color> <b>критический урон</b> в размере<b><i><color=#ff0000> -" + damage + "</color></i></b> HP, и Джагернаут был <b>перенесён</b> в случайную часть комплекса!", false);
             Juggernaut.Debug("Juggernaut Disarmed & Teleported");
         }
 
@@ -150,9 +150,9 @@ namespace JuggernautGamemode
 
             player.PersonalClearBroadcasts();
             if (Juggernaut.juggernaut != null)
-                player.PersonalBroadcast(15, "You are an <color=#002DB3>NTF Commander</color> Work with others to eliminate the <color=#228B22>Juggernaut " + Juggernaut.juggernaut.Name + "</color>", false);
+                player.PersonalBroadcast(15, "Вы <color=#002DB3>Командир</color>. Сотрудничайте с остальными чтобы ликвидровать <color=#228B22>Джагернаута " + Juggernaut.juggernaut.Name + "</color>", false);
             else
-                player.PersonalBroadcast(15, "You are an <color=#002DB3>NTF Commander</color> Work with others to eliminate the <color=#228B22>Juggernaut</color>", false);
+                player.PersonalBroadcast(15, "Вы <color=#002DB3>Командир</color>. Сотрудничайте с остальными чтобы ликвидировать <color=#228B22>Джагернаута</color>", false);
         }
 
         public void SpawnAsJuggernaut(Player player)
@@ -196,7 +196,7 @@ namespace JuggernautGamemode
             }
 
             player.PersonalClearBroadcasts();
-            player.PersonalBroadcast(15, "You are the <color=#228B22>Juggernaut</color> Eliminate all <color=#002DB3>NTF Commanders</color>", false);
+            player.PersonalBroadcast(15, "Вы <color=#228B22>Джагернаут</color>. Ликвидируйте всех <color=#002DB3>Командиров</color>", false);
         }
 
         public string DrawHealthBar(double percentage)

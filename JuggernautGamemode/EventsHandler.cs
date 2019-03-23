@@ -27,12 +27,12 @@ namespace JuggernautGamemode
                 {
                     Server server = plugin.pluginManager.Server;
                     server.Map.ClearBroadcasts();
-                    server.Map.Broadcast(25, "<color=#228B22>Juggernaut Gamemode</color> is starting...", false);
+                    server.Map.Broadcast(25, "Игровой режим <color=#228B22>Джагернаут</color> начинается...", false);
                 }
                 else
                 {
                     ev.Player.PersonalClearBroadcasts();
-                    ev.Player.PersonalBroadcast(10, "<b>Now Playing :</b> <color=#228B22>Juggernaut Gamemode</color>", false);
+                    ev.Player.PersonalBroadcast(10, "<b>Сейчас идёт игровой режим:</b> <color=#228B22>Джагернаут</color>", false);
                 }
             }
         }
@@ -230,14 +230,14 @@ namespace JuggernautGamemode
                 if (Functions.singleton.IsJuggernaut(ev.Player))
                 {
                     plugin.pluginManager.Server.Map.ClearBroadcasts();
-                    plugin.pluginManager.Server.Map.Broadcast(20, "<color=#228B22>Juggernaut " + Juggernaut.juggernaut.Name + "</color> has been killed by " + ev.Killer.Name + "!", false);
+                    plugin.pluginManager.Server.Map.Broadcast(20, "<color=#228B22>Джагернаут " + Juggernaut.juggernaut.Name + "</color> был убит игроком " + ev.Killer.Name + "!", false);
                     Functions.singleton.ResetJuggernaut(ev.Player);
                     Juggernaut.jugg_killer = ev.Killer;
                 }
                 else
                 {
                     plugin.Server.Map.ClearBroadcasts();
-                    plugin.Server.Map.Broadcast(15, "There are " + (Juggernaut.singleton.Server.Round.Stats.NTFAlive - 1) + " NTF remaining.", false);
+                    plugin.Server.Map.Broadcast(15, "В живых " + (Juggernaut.singleton.Server.Round.Stats.NTFAlive - 1) + " МТФ.", false);
                 }
             }
         }
@@ -258,14 +258,14 @@ namespace JuggernautGamemode
                         default:
                         case HealthBar.Raw:
                             plugin.Debug("Raw Health Bar Created");
-                            plugin.pluginManager.Server.Map.Broadcast(3, "<color=#228B22>Juggernaut " + Juggernaut.juggernaut.Name + "</color> HP : <color=#ff0000>" + currentHealth + "/" + maxHealth + "</color>", false); break;
+                            plugin.pluginManager.Server.Map.Broadcast(3, "<color=#228B22>Джагернаут " + Juggernaut.juggernaut.Name + "</color> имеет <color=#ff0000>" + currentHealth + "/" + maxHealth + "</color>" + " HP", false); break;
                         case HealthBar.Bar:
                             plugin.Debug("Drawn Bar Health Bar Created");
                             string bar = Functions.singleton.DrawHealthBar(percentage);
-                            plugin.pluginManager.Server.Map.Broadcast(3, "<color=#228B22>Juggernaut " + Juggernaut.juggernaut.Name + "</color> HP : <color=#ff0000>" + bar + "</color>", false); break;
+                            plugin.pluginManager.Server.Map.Broadcast(3, "<color=#228B22>Джагернаут " + Juggernaut.juggernaut.Name + "</color> имеет <color=#ff0000>" + bar + "</color>" + " HP", false); break;
                         case HealthBar.Percentage:
                             plugin.Debug("Percentage Health Bar Created");
-                            plugin.pluginManager.Server.Map.Broadcast(3, "<color=#228B22>Juggernaut " + Juggernaut.juggernaut.Name + "</color> HP : <color=#ff0000>" + (percentage * 100) + "%</color>", false); break;
+                            plugin.pluginManager.Server.Map.Broadcast(3, "<color=#228B22>Джагернаут " + Juggernaut.juggernaut.Name + "</color> имеет <color=#ff0000>" + (percentage * 100) + "%</color>" + " HP", false); break;
                     }
                 }
             }
