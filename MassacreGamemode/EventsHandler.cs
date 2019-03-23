@@ -21,7 +21,7 @@ namespace MassacreGamemode
                 {
                     Server server = plugin.pluginManager.Server;
                     server.Map.ClearBroadcasts();
-                    server.Map.Broadcast(25, "<color=#50c878>Massacre Gamemode</color> is starting...", false);
+                    server.Map.Broadcast(25, "<color=#50c878>Бойня</color> начинается...", false);
                 }
             }
         }
@@ -90,8 +90,8 @@ namespace MassacreGamemode
                 if (ev.Player.TeamRole.Role == Role.CLASSD)
                 {
                     plugin.Server.Map.ClearBroadcasts();
-                    plugin.Server.Map.Broadcast(5, "There are now " + (plugin.Server.Round.Stats.ClassDAlive - 1) + " Class-D remaining.", false);
-                    ev.Player.PersonalBroadcast(25, "You are dead! But don't worry, now you get to relax and watch your friends die!", false);
+                    plugin.Server.Map.Broadcast(5, "В живых " + (plugin.Server.Round.Stats.ClassDAlive - 1) + " Класс-Д.", false);
+                    ev.Player.PersonalBroadcast(25, "Вы мертвы! Но не расстраивайтесь, теперь вы можете расслабиться и смотреть, как ваши друзья умирают!", false);
                 }
             }
         }
@@ -132,7 +132,7 @@ namespace MassacreGamemode
                             if (player.TeamRole.Team == Team.CLASSD)
                             {
                                 ev.Server.Map.ClearBroadcasts();
-                                ev.Server.Map.Broadcast(10, player.Name + " Winner, winner, chicken dinner!", false);
+                                ev.Server.Map.Broadcast(10, player.Name + " победитель!", false);
                                 winner = player;
                             }
                         }

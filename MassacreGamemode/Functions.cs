@@ -19,7 +19,7 @@ namespace MassacreGamemode
             if (!Massacre.roundstarted)
             {
                 Massacre.pluginManager.Server.Map.ClearBroadcasts();
-                Massacre.pluginManager.Server.Map.Broadcast(25, "<color=#50c878>Massacre of the D-Bois Gamemode</color> is starting..", false);
+                Massacre.pluginManager.Server.Map.Broadcast(25, "<color=#50c878>Избиение Д-класса</color> начинается..", false);
             }
         }
         public void DisableGamemode()
@@ -96,7 +96,7 @@ namespace MassacreGamemode
             player.GiveItem(ItemType.CUP);
 
             player.PersonalClearBroadcasts();
-            player.PersonalBroadcast(25, "You are a <color=#ffa41a>D-Boi</color>! Get ready to die!", false);
+            player.PersonalBroadcast(25, "Ты <color=#ffa41a>Дешка</color>! Приготовься умирать!", false);
         }
         public IEnumerable<float> SpawnNut(Player player, float delay)
         {
@@ -105,7 +105,7 @@ namespace MassacreGamemode
             player.Teleport(Massacre.SpawnLoc);
             Massacre.Info("Spawned " + player.Name + " as SCP-173");
             player.PersonalClearBroadcasts();
-            player.PersonalBroadcast(35, "You are a <color=#c50000>Neck-Snappy Boi</color>! Kill all of the D-bois!", false);
+            player.PersonalBroadcast(35, "Ты <color=#c50000>печенька</color>! Убей всех Дешек!", false);
             player.SetHealth(Massacre.nut_health);
         }
         public void EndGamemodeRound()
